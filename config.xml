@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="uk.co.workingedge.firebase.test" version="10.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.arturoloma.firebasextest" version="10.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>FirebaseTest</name>
     <description>
         Test project for cordova-plugin-firebasex
@@ -7,19 +7,15 @@
     <author email="dave@workingedge.co.uk">
        Dave Alden
     </author>
-
     <content src="index.html" />
     <access origin="*" />
-
-    <plugin name="cordova-plugin-firebasex" spec="https://github.com/dpa99c/cordova-plugin-firebase" >
+    <plugin name="cordova-plugin-firebasex" spec="https://github.com/dpa99c/cordova-plugin-firebase">
         <variable name="IOS_STRIP_DEBUG" value="true" />
-        <variable name="FIREBASE_ANALYTICS_COLLECTION_ENABLED" value="false" />
-        <variable name="FIREBASE_PERFORMANCE_COLLECTION_ENABLED" value="false" />
-        <variable name="FIREBASE_CRASHLYTICS_COLLECTION_ENABLED" value="false" />
+        <variable name="FIREBASE_ANALYTICS_COLLECTION_ENABLED" value="true" />
+        <variable name="FIREBASE_PERFORMANCE_COLLECTION_ENABLED" value="true" />
+        <variable name="FIREBASE_CRASHLYTICS_COLLECTION_ENABLED" value="true" />
         <variable name="SETUP_RECAPTCHA_VERIFICATION" value="true" />
     </plugin>
-
-    <engine name="android" spec="^8.1.0" />
     <platform name="android">
         <resource-file src="res/android/raw/blackberry.mp3" target="app/src/main/res/raw/blackberry.mp3" />
         <resource-file src="res/android/raw/msn.mp3" target="app/src/main/res/raw/msn.mp3" />
@@ -45,10 +41,8 @@
         <custom-config-file parent="./application" target="AndroidManifest.xml">
             <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/notification_icon" />
         </custom-config-file>
-
         <resource-file src="res/android/values/colors.xml" target="app/src/main/res/values/colors.xml" />
     </platform>
-
     <engine name="ios" spec="^5.0.1" />
     <platform name="ios">
         <resource-file src="res/ios/sound/blackberry.caf" />
@@ -56,4 +50,3 @@
         <resource-file src="res/ios/sound/msn.caf" />
     </platform>
 </widget>
-
